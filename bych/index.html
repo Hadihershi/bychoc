@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeyChoc - Premium Chocolate Shop</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="assets/images/logo.png" alt="BeyChoc Logo" class="logo-img">
+                <span class="logo-text">BeyChoc</span>
+            </div>
+            
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="#products" class="nav-link">Products</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a href="admin/login.php" class="nav-link admin-link">Admin</a>
+                </li>
+            </ul>
+
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Banner Section -->
+    <section class="banner" id="banner">
+        <div class="slideshow-container">
+            <div class="slide active">
+                <img src="assets/images/banner1.jpg" alt="Premium Chocolate Collection" loading="eager">
+                <div class="slide-content">
+                    <h1>Premium Chocolate Collection</h1>
+                    <p>Discover the finest chocolates crafted with passion</p>
+                    <button class="cta-btn" onclick="scrollToSection('products')">Explore Products</button>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="assets/images/banner2.jpg" alt="Handcrafted Chocolates" loading="lazy">
+                <div class="slide-content">
+                    <h1>Handcrafted Excellence</h1>
+                    <p>Every piece tells a story of quality and tradition</p>
+                    <button class="cta-btn" onclick="scrollToSection('products')">Shop Now</button>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="assets/images/banner3.jpg" alt="Luxury Chocolate Packages" loading="lazy">
+                <div class="slide-content">
+                    <h1>Luxury Gift Packages</h1>
+                    <p>Perfect gifts for your loved ones</p>
+                    <button class="cta-btn" onclick="scrollToSection('products')">View Packages</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-section" id="products">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Products</h2>
+                <p>Indulge in our exquisite chocolate collection</p>
+            </div>
+
+            <!-- Search and Filter -->
+            <div class="search-filter-container">
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Search by name or code...">
+                    <i class="fas fa-search"></i>
+                </div>
+                
+                <div class="category-filter">
+                    <select id="categoryFilter">
+                        <option value="">All Categories</option>
+                        <option value="White Chocolate">White Chocolate</option>
+                        <option value="Milk Chocolate">Milk Chocolate</option>
+                        <option value="Dark Chocolate">Dark Chocolate</option>
+                        <option value="Light Chocolate">Light Chocolate</option>
+                        <option value="Bars">Bars</option>
+                        <option value="Packages">Packages</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be loaded dynamically -->
+            </div>
+
+            <!-- Loading Spinner -->
+            <div class="loading" id="loading">
+                <div class="spinner"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get In Touch</h2>
+                <p>Connect with us on social media</p>
+            </div>
+            
+            <div class="contact-links">
+                <a href="https://wa.me/96170282127" target="_blank" class="contact-link whatsapp">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>WhatsApp</span>
+                </a>
+                <a href="https://instagram.com/beychoc" target="_blank" class="contact-link instagram">
+                    <i class="fab fa-instagram"></i>
+                    <span>Instagram</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 BeyChoc. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Product Details Modal -->
+    <div class="modal" id="productModal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <div class="modal-body" id="modalBody">
+                <!-- Product details will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
